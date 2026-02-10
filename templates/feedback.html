@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if is_correct %}
+<!-- Correct answer -->
+<div class="feedback-box success">
+    <h2 class="correct">✓ Correct!</h2>
+    <p>{{ feedback }}</p>
+</div>
+
+<a href="{{ url_for('show_frame') }}" class="button">Next Frame →</a>
+
+{% else %}
+<!-- Incorrect answer -->
+<div class="feedback-box error">
+    <h2 class="incorrect">✗ Not quite...</h2>
+    <p>{{ feedback }}</p>
+    <p style="margin-top: 15px;">
+        <strong>The correct answer was:</strong> {{ frame.answer }}
+    </p>
+</div>
+
+<!-- 
+    DESIGN CHOICE: What happens after an incorrect answer?
+    
+    Option A (current): Advance to next frame anyway
+    Option B: Stay on same frame until correct (uncomment below)
+    
+    Skinner's original machines used Option B.
+    Modify based on your pedagogical goals!
+-->
+
+<!-- Option A: Advance anyway (current behavior) -->
+<a href="{{ url_for('show_frame') }}" class="button">Continue to Next Frame →</a>
+
+<!-- Option B: Retry same frame (uncomment to use)
+<p style="margin-top: 15px;">
+    <a href="{{ url_for('show_frame') }}" class="button">Try Again</a>
+</p>
+-->
+
+{% endif %}
+
+{% endblock %}

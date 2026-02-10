@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>🎓 Welcome to the Teaching Machine</h1>
+
+<p>This lesson contains <strong>{{ total_frames }}</strong> frames designed to help you learn step by step.</p>
+
+<h2>How it works:</h2>
+<ul>
+    <li>📖 Read each prompt carefully</li>
+    <li>✍️ Type your answer in the box</li>
+    <li>✅ Get immediate feedback</li>
+    <li>🚀 Progress at your own pace</li>
+</ul>
+
+<p><em>Based on B.F. Skinner's programmed instruction principles (1958)</em></p>
+
+<a href="{{ url_for('show_frame') }}" class="button">Start Learning →</a>
+{% endblock %}

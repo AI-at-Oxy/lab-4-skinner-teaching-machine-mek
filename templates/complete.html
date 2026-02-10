@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>🎉 Lesson Complete!</h1>
+
+<div class="score">
+    {{ score }} / {{ total }}
+    <span class="score-label">frames correct on first try</span>
+</div>
+
+<div class="progress-bar" style="height: 20px; margin: 30px 0;">
+    <div class="progress-bar-fill" style="width: {{ percentage }}%; 
+        {% if percentage == 100 %}
+            background: #27ae60;
+        {% elif percentage >= 80 %}
+            background: #3498db;
+        {% elif percentage >= 60 %}
+            background: #f39c12;
+        {% else %}
+            background: #e74c3c;
+        {% endif %}
+    "></div>
+</div>
+
+<p style="text-align: center; font-size: 1.2em;">
+    <strong>{{ percentage }}%</strong>
+</p>
+
+{% if percentage == 100 %}
+<div class="feedback-box success">
+    <p>🌟 <strong>Perfect score!</strong> Outstanding work! You've mastered this material.</p>
+</div>
+
+{% elif percentage >= 80 %}
+<div class="feedback-box success">
+    <p>👏 <strong>Great job!</strong> You've demonstrated strong understanding of the material.</p>
+</div>
+
+{% elif percentage >= 60 %}
+<div style="padding: 20px; background: #fff9e6; border-radius: 5px; border: 1px solid #f0e68c;">
+    <p>📚 <strong>Good effort!</strong> Consider reviewing the material and trying again to strengthen your understanding.</p>
+</div>
+
+{% else %}
+<div class="feedback-box error">
+    <p>💪 <strong>Keep practicing!</strong> Review the material and give it another try. Learning takes time!</p>
+</div>
+{% endif %}
+
+<div style="margin-top: 30px; text-align: center;">
+    <a href="{{ url_for('index') }}" class="button">Start Over</a>
+</div>
+
+<!-- 
+    EXTENSION IDEAS:
+    - Save results to a file or database
+    - Show which frames were missed
+    - Offer targeted review of missed content
+    - Track time spent
+-->
+
+{% endblock %}
