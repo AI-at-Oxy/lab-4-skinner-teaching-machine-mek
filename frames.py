@@ -72,18 +72,18 @@ FRAMES = [
     
     # Frame 3: Simple assignment
     {
-        "prompt": "To store the number 5 in a variable called x, we write: x _____ 5",
-        "answer": "=",
-        "feedback_correct": "Correct! x = 5 assigns the value 5 to x.",
-        "feedback_incorrect": "Remember, we use = for assignment. So: x = 5"
+        "prompt": "Who is the main villain the the movie Alladin?",
+        "answer": "Jafar ",
+        "feedback_correct": "Correct! Jafar is the main villain in the movie Alladin.",
+        "feedback_incorrect": "Almost. Hint: He has a pet parrot named Iago."
     },
     
     # Frame 4: String variables
     {
-        "prompt": "Text data in Python is called a _____.",
-        "answer": "string",
-        "feedback_correct": "Yes! Strings are sequences of characters (text).",
-        "feedback_incorrect": "Text data is called a string."
+        "prompt": "What is Jafars most famous song?",
+        "answer": "You're Only Second Rate",
+        "feedback_correct": "Yes! You're Only Second Rate is Jafars most famous song.",
+        "feedback_incorrect": "Almost. In this song showcases his boastfull atitude towrards the genie."
     },
     
     # Frame 5: String syntax
