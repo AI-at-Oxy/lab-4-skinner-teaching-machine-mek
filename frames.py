@@ -56,18 +56,18 @@ Choose a structure and be CONSISTENT across all your frames!
 FRAMES = [
     # Frame 1: Introduction
     {
-        "prompt": "In Python, we store data in _____. (Hint: they can vary!)",
-        "answer": "variables",
-        "feedback_correct": "Correct! Variables are containers for storing data.",
-        "feedback_incorrect": "Not quite. We store data in variables."
+        "prompt": "In Alladin, the main character is _____.",
+        "answer": "Alladin",
+        "feedback_correct": "Correct! The movie called Alladin is about Alladin.",
+        "feedback_incorrect": "Not quite. Hint - The movie is named after him!"
     },
     
     # Frame 2: Assignment operator
     {
-        "prompt": "To assign a value to a variable, we use the _____ sign.",
-        "answer": "=",
-        "feedback_correct": "Yes! The = sign is the assignment operator.",
-        "feedback_incorrect": "Not quite. We use the = (equals) sign."
+        "prompt": "Alladin's sings this song when he tries to become a prince: ____.",
+        "answer": "Prince Ali",
+        "feedback_correct": "Yes! Prince Ali fabulous he...",
+        "feedback_incorrect": "Not quite. The song is called 'Prince __' (google it)."
     },
     
     # Frame 3: Simple assignment
