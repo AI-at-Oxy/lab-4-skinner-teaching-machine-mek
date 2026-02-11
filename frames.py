@@ -86,20 +86,20 @@ FRAMES = [
         "feedback_incorrect": "Text data is called a string."
     },
     
-    # Frame 5: String syntax
+    # Frame 5: Princess Jasmine
     {
-        "prompt": "Strings must be surrounded by _____ or double quotes.",
-        "answer": "single",
-        "feedback_correct": "Correct! Both 'hello' and \"hello\" are valid strings.",
-        "feedback_incorrect": "Strings use single quotes or double quotes: 'hello' or \"hello\""
+        "prompt": "The princess in Aladdin is named _____.",
+        "answer": "jasmine",
+        "feedback_correct": "Correct! The princess in Aladdin is named Jasmine!",
+        "feedback_incorrect": "No. But I'll give you a hint: it is a type of flower."
     },
     
-    # Frame 6: Naming conventions
+    # Frame 6: Princess Jasmine song
     {
-        "prompt": "Variable names in Python cannot start with a _____.",
-        "answer": "number",
-        "feedback_correct": "Right! Variables can't start with numbers. 'var1' is ok, '1var' is not.",
-        "feedback_incorrect": "Variable names cannot start with a number."
+        "prompt": "What is Princess Jasmine's most famous song?",
+        "answer": "a whole new world",
+        "feedback_correct": "Yessss that's right! It truly is one of the best Disney songs of all time.",
+        "feedback_incorrect": "Noooo. Try again, it's a duet."
     },
     
     # Frame 7: Case sensitivity
