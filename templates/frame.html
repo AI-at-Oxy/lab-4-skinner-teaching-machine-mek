@@ -13,6 +13,96 @@
 </div>
 
 <!-- Answer form -->
+{% if frame.get('type') == 'drag' %}
+<form action="{{ url_for('submit_answer') }}" method="POST" id="drag-form">
+    <div id="choices" style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:15px;">
+        {% for opt in frame.options %}
+        <div class="choice" draggable="true" data-value="{{ opt.lower() }}" style="padding:8px 12px; background:#f0f0f0; border-radius:6px; cursor:grab;">
+            {{ opt }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="drop-area" style="min-height:60px; padding:12px; border:2px dashed #ccc; border-radius:8px; background:#fff;">
+        <p style="margin:0; color:#777;">Drop the singer(s) here.</p>
+    </div>
+
+    <input type="hidden" name="answer" id="drag-answer">
+    <br>
+    <button type="submit">Submit Selection</button>
+</form>
+
+<script>
+(() => {
+    const choices = document.querySelectorAll('.choice');
+    const drop = document.getElementById('drop-area');
+    const answerInput = document.getElementById('drag-answer');
+    const form = document.getElementById('drag-form');
+
+    choices.forEach(ch => {
+        ch.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('text/plain', ch.dataset.value);
+        });
+
+        // also support click to toggle selection (helpful on touch)
+        ch.addEventListener('click', () => {
+            toggleChoice(ch);
+            updateAnswer();
+        });
+    });
+
+    drop.addEventListener('dragover', e => { e.preventDefault(); });
+
+    drop.addEventListener('drop', e => {
+        e.preventDefault();
+        const val = e.dataTransfer.getData('text/plain');
+        const el = Array.from(choices).find(c => c.dataset.value === val);
+        if (el) {
+            addToDrop(el);
+            updateAnswer();
+        }
+    });
+
+    function addToDrop(el) {
+        if (drop.querySelector(`[data-value="${el.dataset.value}"]`)) return; // already added
+        const clone = el.cloneNode(true);
+        clone.style.cursor = 'pointer';
+        clone.addEventListener('click', () => {
+            // remove on click
+            clone.remove();
+            updateAnswer();
+        });
+        drop.appendChild(clone);
+    }
+
+    function toggleChoice(el) {
+        // if already in drop, remove it
+        const existing = drop.querySelector(`[data-value="${el.dataset.value}"]`);
+        if (existing) { existing.remove(); return; }
+        addToDrop(el);
+    }
+
+    function updateAnswer() {
+        const items = Array.from(drop.querySelectorAll('[data-value]'))
+            .map(n => n.dataset.value)
+            .filter(v => v && v !== '');
+        // normalize order by sorting to reduce fragile ordering mismatches
+        items.sort();
+        answerInput.value = items.join(',');
+    }
+
+    // prevent submitting empty selection (optional: allow attempts)
+    form.addEventListener('submit', e => {
+        updateAnswer();
+        if (!answerInput.value) {
+            e.preventDefault();
+            alert('Please select at least one character.');
+        }
+    });
+})();
+</script>
+
+{% else %}
 <form action="{{ url_for('submit_answer') }}" method="POST">
     <input 
         type="text" 
@@ -25,6 +115,7 @@
     <br>
     <button type="submit">Submit Answer</button>
 </form>
+{% endif %}
 
 <!-- Optional: Add a hint button if your frames have hints -->
 {% if frame.hint %}
