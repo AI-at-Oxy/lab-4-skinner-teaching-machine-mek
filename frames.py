@@ -56,15 +56,15 @@ Choose a structure and be CONSISTENT across all your frames!
 FRAMES = [
     # Frame 1: Introduction
     {
-        "prompt": "In Alladin, the main character is _____.",
-        "answer": "Alladin",
-        "feedback_correct": "Correct! The movie called Alladin is about Alladin.",
-        "feedback_incorrect": "Not quite. Hint - The movie is named after him!"
+        "prompt": "In Aladdin, the main character finds a magic lamp that contains this powerful blue character:",
+        "answer": "Genie",
+        "feedback_correct": "Correct! The answer was Genie.",
+        "feedback_incorrect": "Not quite. Hint - He gives you 3 wishes!"
     },
     
     # Frame 2: Assignment operator
     {
-        "prompt": "Alladin's sings this song when he tries to become a prince: ____.",
+        "prompt": "The Genie sings this song when he transforms Aladdin into a prince: ____.",
         "answer": "Prince Ali",
         "feedback_correct": "Yes! Prince Ali fabulous he...",
         "feedback_incorrect": "Not quite. The song is called 'Prince __' (google it)."
