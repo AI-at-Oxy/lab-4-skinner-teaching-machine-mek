@@ -114,12 +114,14 @@ FRAMES = [
         "feedback_incorrect": "Not quite. That song is a duet sung by Aladdin and Jasmine."
     },
     
-    # Frame 8: Print function
+    # Frame 8: Drag-and-drop - who sings this song?
     {
-        "prompt": "To display a variable's value, we use the _____ function.",
-        "answer": "print",
-        "feedback_correct": "Yes! print(x) displays the value of x.",
-        "feedback_incorrect": "We use the print() function to display values."
+        "type": "drag",
+        "prompt": "Drag the character(s) who sing the song 'Prince Ali'.",
+        "answer": "genie",
+        "options": ["Aladdin", "Jasmine", "Genie", "Jafar", "Iago", "Sultan"],
+        "feedback_correct": "Correct! 'Prince Ali' is performed by the Genie.",
+        "feedback_incorrect": "Not quite. 'Prince Ali' is performed by the Genie."
     },
 ]
 
