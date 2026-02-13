@@ -102,12 +102,16 @@ FRAMES = [
         "feedback_incorrect": "Noooo. Try again, it's a duet."
     },
     
-    # Frame 7: Case sensitivity
+    # Frame 7: Drag-and-drop - who sings this song?
     {
-        "prompt": "In Python, 'Name' and 'name' are _____ variables. (same/different)",
-        "answer": "different",
-        "feedback_correct": "Correct! Python is case-sensitive.",
-        "feedback_incorrect": "Python is case-sensitive, so Name and name are different."
+        "type": "drag",
+        "prompt": "Drag the character(s) who sing the song 'A Whole New World'.",
+        # the correct answers (normalized to lowercase)
+        "answer": "aladdin,jasmine",
+        # options presented as draggable choices (display text)
+        "options": ["Aladdin", "Jasmine", "Genie", "Jafar", "Iago", "Sultan"],
+        "feedback_correct": "Correct! 'A Whole New World' is sung by Aladdin and Jasmine.",
+        "feedback_incorrect": "Not quite. That song is a duet sung by Aladdin and Jasmine."
     },
     
     # Frame 8: Print function
