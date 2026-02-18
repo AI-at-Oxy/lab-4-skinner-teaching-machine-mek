@@ -56,18 +56,18 @@ Choose a structure and be CONSISTENT across all your frames!
 FRAMES = [
     # Frame 1: Introduction
     {
-        "prompt": "In Python, we store data in _____. (Hint: they can vary!)",
-        "answer": "variables",
-        "feedback_correct": "Correct! Variables are containers for storing data.",
-        "feedback_incorrect": "Not quite. We store data in variables."
+        "prompt": "In Aladdin, the main character finds a magic lamp that contains this powerful blue character:",
+        "answer": "Genie",
+        "feedback_correct": "Correct! The answer was Genie.",
+        "feedback_incorrect": "Not quite. Hint - He gives you 3 wishes!"
     },
     
     # Frame 2: Assignment operator
     {
-        "prompt": "To assign a value to a variable, we use the _____ sign.",
-        "answer": "=",
-        "feedback_correct": "Yes! The = sign is the assignment operator.",
-        "feedback_incorrect": "Not quite. We use the = (equals) sign."
+        "prompt": "The Genie sings this song when he transforms Aladdin into a prince: ____.",
+        "answer": "Prince Ali",
+        "feedback_correct": "Yes! Prince Ali fabulous he...",
+        "feedback_incorrect": "Not quite. The song is called 'Prince __' (google it)."
     },
     
     # Frame 3: Simple assignment
@@ -86,36 +86,42 @@ FRAMES = [
         "feedback_incorrect": "Text data is called a string."
     },
     
-    # Frame 5: String syntax
+    # Frame 5: Princess Jasmine
     {
-        "prompt": "Strings must be surrounded by _____ or double quotes.",
-        "answer": "single",
-        "feedback_correct": "Correct! Both 'hello' and \"hello\" are valid strings.",
-        "feedback_incorrect": "Strings use single quotes or double quotes: 'hello' or \"hello\""
+        "prompt": "The princess in Aladdin is named _____.",
+        "answer": "jasmine",
+        "feedback_correct": "Correct! The princess in Aladdin is named Jasmine!",
+        "feedback_incorrect": "No. But I'll give you a hint: it is a type of flower."
     },
     
-    # Frame 6: Naming conventions
+    # Frame 6: Princess Jasmine song
     {
-        "prompt": "Variable names in Python cannot start with a _____.",
-        "answer": "number",
-        "feedback_correct": "Right! Variables can't start with numbers. 'var1' is ok, '1var' is not.",
-        "feedback_incorrect": "Variable names cannot start with a number."
+        "prompt": "What is Princess Jasmine's most famous song?",
+        "answer": "a whole new world",
+        "feedback_correct": "Yessss that's right! It truly is one of the best Disney songs of all time.",
+        "feedback_incorrect": "Noooo. Try again, it's a duet."
     },
     
-    # Frame 7: Case sensitivity
+    # Frame 7: Drag-and-drop - who sings this song?
     {
-        "prompt": "In Python, 'Name' and 'name' are _____ variables. (same/different)",
-        "answer": "different",
-        "feedback_correct": "Correct! Python is case-sensitive.",
-        "feedback_incorrect": "Python is case-sensitive, so Name and name are different."
+        "type": "drag",
+        "prompt": "Drag the character(s) who sing the song 'A Whole New World'.",
+        # the correct answers (normalized to lowercase)
+        "answer": "aladdin,jasmine",
+        # options presented as draggable choices (display text)
+        "options": ["Aladdin", "Jasmine", "Genie", "Jafar", "Iago", "Sultan"],
+        "feedback_correct": "Correct! 'A Whole New World' is sung by Aladdin and Jasmine.",
+        "feedback_incorrect": "Not quite. That song is a duet sung by Aladdin and Jasmine."
     },
     
-    # Frame 8: Print function
+    # Frame 8: Drag-and-drop - who sings this song?
     {
-        "prompt": "To display a variable's value, we use the _____ function.",
-        "answer": "print",
-        "feedback_correct": "Yes! print(x) displays the value of x.",
-        "feedback_incorrect": "We use the print() function to display values."
+        "type": "drag",
+        "prompt": "Drag the character(s) who sing the song 'Prince Ali'.",
+        "answer": "genie",
+        "options": ["Aladdin", "Jasmine", "Genie", "Jafar", "Iago", "Sultan"],
+        "feedback_correct": "Correct! 'Prince Ali' is performed by the Genie.",
+        "feedback_incorrect": "Not quite. 'Prince Ali' is performed by the Genie."
     },
 ]
 
