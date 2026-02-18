@@ -1,0 +1,50 @@
+1. How did designing frames change your understanding of the content you chose?
+
+Our 'content' was not exactly academic (Alladin characters and songs), but at the
+same time, it offered an interesting way to experiment with Skinner teaching machines.
+I realized pretty quickly that even though the content was simple, the way that questions
+are phrased is really important. If you just ask someone something that they have no
+frame of reference for (for example: Who sings Prince Ali?), then there is no possible
+way they can get the right answer, and similarly it is not an effective way to learn. 
+I found that adding in some context and being very thoughtful of how questions are phrased
+was the best way to make my frames stronger.
+
+2. What was difficult about breaking knowledge into small steps?
+
+Given that it was a small assignement (only 2-3 frames per person) I think that this was 
+not a super applicable part of my thinking process in this assignment. However, I can imagine
+that if I was working on a larger-scale Skinner machine, it would be difficult to balance
+the small steps with the increasing knowledge base. For example something like Doulingo, where
+you learn a couple words a day, you have to review previous days words while slowly adding to
+the knowledge base. Therefore you are not just breaking knowledge into steps, but (what I think)
+is even more difficult is re-iterating that knowledge at the correct frequency.
+
+3. Skinner claimed teaching machines could replace teachers for factual content. Do you
+agree? What can’t this approach do?
+
+I don't think there is hardly any relevance to memorizing facts when it comes to actual learning.
+I had a social studies class in high school wehre the professor just gave us facts to memorize and
+then tested us with multiple choice/fill in the blank on the content. While I did well at 
+memorizing the facts at the time, I couldn't even tell you what periods of history we studied. To
+me at least, I don't really see any application of Skinner teaching machines that is better than an
+actual teacher. In a pinch, I do think that it could be helpful for teaching factual content in 
+areas where teachers/schools are not a viable option. For example, for self teaching coding, I think
+a Skinner teaching machine could provide a foundation for syntax and structure, but probably couldn't
+teach DSA or something with critical thinking/understanding involved.
+
+4. How might you combine this approach with modern AI (e.g., generating feedback
+dynamically)?
+
+I do think that it could be interesting to have an adaptive learning Skinner machine, which
+changes the pace of its lessons, the frequency which it re-iterates topics, and even the 
+order/content it teaches. The machine could use AI to help decide what to teach next based on
+the time and accuracy of the students answers (for example a quick correct answer -> confident
+in that subject, move on to more advanced, while a slow or wrong answer -> more iterations of
+that content).
+
+5. What would Papert (constructionism) say about this approach to learning?
+
+As an advocate for a creative, learn-by-doing approach, Papert would probably say that Skinner
+teaching machines are only programmed for pushing programmed information onto students. Students
+then don't have the ability to develop knowledge/understanding organically, but rather are told 
+what information they should connect to other information (like an information call and response).
